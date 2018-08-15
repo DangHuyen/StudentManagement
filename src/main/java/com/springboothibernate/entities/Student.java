@@ -17,6 +17,12 @@ public class Student {
 
 	@Column(name = "studentname")
 	private String name;
+	
+	@Column(name="email")
+	private String email;
+	
+	@Column(name="student_class")
+	private String studentClass;
 
 	@Column(name = "address")
 	private String address;
@@ -39,6 +45,22 @@ public class Student {
 	public void setName(String name) {
 		this.name = name;
 	}
+	
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getStudentClass() {
+		return studentClass;
+	}
+
+	public void setStudentClass(String studentClass) {
+		this.studentClass = studentClass;
+	}
 
 	public String getAddress() {
 		return address;
@@ -51,6 +73,7 @@ public class Student {
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return "Student: "+ this.id +"  name: "+ this.name + "  address:" +this.address;
+		return "Student's id: " + this.id + "  name: " + this.name + "   email: " + this.getEmail() + "  address:"
+				+ this.address + "   class: " + this.getStudentClass();
 	}
 }

@@ -31,7 +31,9 @@ public class CourseDAO {
 
 	public Course findById(final int id) {
 		Session session = this.sessionFactory.getCurrentSession();
+		//String sql="FROM Courses Where course_id=1";
 		return session.get(Course.class, id);
+		//return (Course) session.createQuery(sql);
 	}
 
 	public void delete(final Course course) {
